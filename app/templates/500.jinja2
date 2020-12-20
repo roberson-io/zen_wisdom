@@ -1,0 +1,9 @@
+{% extends "base.jinja2" %}
+
+{% block title %}500 Internal Server Error{% endblock title %}
+
+{% block content %}
+  <h1>500 Internal Server Error</h1>
+  <p>The server encountered an unexpected condition which prevented it from fulfilling the request.</p>
+  <a href="{{ url_for('main.index') }}">Home</a>
+{% endblock content %}

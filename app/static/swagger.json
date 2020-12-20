@@ -1,0 +1,61 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "description": "A simple web API example that returns zen wisdom.",
+      "version": "0.0.1",
+      "title": "Zen Wisdom API",
+      "contact": {
+        "email": "michaelroberson@gmail.com"
+      }
+    },
+    "basePath": "/api",
+    "schemes": [
+      "https",
+      "http"
+    ],
+    "paths": {
+      "/zen_wisdom": {
+        "get": {
+          "summary": "Ask the zen sage a question.",
+          "description": "Returns zen wisdom from the sage.",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "question",
+              "type": "string",
+              "description": "Your question for the zen sage.",
+              "required": true
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "successful operation",
+              "schema": {
+                "$ref": "#/definitions/Wisdom"
+              }
+            },
+            "400": {
+              "description": "Maximum question length exceeded."
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "Wisdom": {
+        "type": "object",
+        "properties": {
+          "wisdom": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "externalDocs": {
+      "description": "Find out more about Swagger",
+      "url": "http://swagger.io"
+    }
+  }

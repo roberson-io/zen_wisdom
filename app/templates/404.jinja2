@@ -1,0 +1,9 @@
+{% extends "base.jinja2" %}
+
+{% block title %}404 Not Found{% endblock title %}
+
+{% block content %}
+  <h1>404 Not Found</h1>
+  <p>The server has not found anything matching the Request-URI.</p>
+  <a href="{{ url_for('main.index') }}">Home</a>
+{% endblock content %}

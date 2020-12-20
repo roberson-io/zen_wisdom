@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A simple web API example that returns zen wisdom.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}{% endblock title %} | Zen Wisdom API</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+  </head>
+  <body>
+    <main role="main">
+      <div class="container">
+      <nav>
+        <a href="{{ url_for('main.index') }}">Home</a>
+        |
+        <a href="{{ url_for('main.api_docs') }}">API Documentation</a>
+      </nav>
+        {% block content %}
+          <p>No content</p>
+        {% endblock content %}
+      </div>
+    </main>
+  </body>
+</html>

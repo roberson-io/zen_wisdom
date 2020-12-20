@@ -1,0 +1,12 @@
+{% extends "base.jinja2" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+  <h1>Zen Wisdom API</h1>
+  <form method="GET" action="{{ url_for('api.impart_wisdom') }}">
+    <label for="question">Your question:</label>
+    <input type="text" id="question" name="question" maxlength="{{ question_max }}" required>
+    <button type="submit">Ask</button>
+  </form>
+{% endblock content %}
