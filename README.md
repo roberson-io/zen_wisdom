@@ -30,6 +30,16 @@ flask run
 
 There is a page to test the API endpoint and access API documentation at [http://localhost:5000/](http://localhost:5000/).
 
+Run unit tests with pytest:
+```
+pytest
+```
+
+There is a Bash script that runs a code formatter, linter, and code quality checks:
+```
+./code-quality.sh
+```
+
 ## Example
 The endpoint is `/api/zen_wisdom` and there is a required `question` parameter.
 
